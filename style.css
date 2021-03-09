@@ -1,0 +1,69 @@
+﻿/*
+
+Theme Name: Reboot Child
+
+Theme URI: https://wpshop.ru/themes/reboot
+
+Author: WPShop.biz
+
+Author URI: http://wpshop.biz/
+
+Template: reboot
+
+Version: 1.0.0
+
+*/
+
+
+
+/* Below you can add your CSS styles */
+
+/* Ниже Вы можете добавить свои CSS стили */
+.main-navigation .menu {
+	justify-content: space-between;
+}
+
+.custom-image__prewiew img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.custom-image__prewiew figure.aligncenter {
+    margin: 0;
+	width: 100%;
+}
+
+.wpcf7-submit {
+	color: #ffffff;
+  background-color: #467637;
+	font-weight: 700;
+  padding: 16px 20px;
+  line-height: 100%;
+  font-size: 14px; 
+	border: 4px solid #467637;
+}
+
+.contact-form__input {
+	width: 100%;
+  padding: 15px 26px !important;
+	font-size: 14px;
+  border: 1px solid #284a2e !important;
+}
+
+.header-html-2 .button {
+	background-color: #467637;
+	padding: 12px 10px;
+}
+
+.header-html-1 a {
+	font-weight: 700;
+	color: #467637;
+	margin-bottom: 5px;
+	display:block;
+}
+
+.site-footer-container {
+	position: relative !important;
+  bottom: 0;
+}
