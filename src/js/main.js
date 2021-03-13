@@ -1,20 +1,42 @@
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   slidesPerView: 4,
-  spaceBetween: 30,
   slidesPerGroup: 1,
   loop: true,
   loopFillGroupWithBlank: true,
-  lazy: true,
+  grabCursor: true,
+  autoHeight: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+
+    },
+    480: {
+      slidesPerView: 2,
+
+    },
+    992: {
+      slidesPerView: 3,
+
+    },
+
+    1200: {
+      slidesPerView: 4,
+
+    }
+  },
 
   // If we need pagination
-  /* pagination: {
+  pagination: {
     el: '.swiper-pagination',
-  }, */
+    clickable: true,
+    dynamicBullets: true,
+
+  },
 
   // Navigation arrows
   navigation: {
@@ -22,8 +44,4 @@ const swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
- /*  scrollbar: {
-    el: '.swiper-scrollbar',
-  }, */
 });

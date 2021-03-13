@@ -11,10 +11,16 @@
 
   <!-- стили  -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/main.css">
+
+  @@include('sections/favicon.html')
+
 </head>
 
 <body>
+
   <main class="main  main--home">
 
     <section class="priority-project">
@@ -56,70 +62,79 @@
                 height="111" aria-label="Смотреть видео"></button>
           </div>
         </div>
+      </div>
 
         <div class="home-slider">
-          <!-- Slider main container -->
-          <div class="swiper-container">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/1.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/2.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/3.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/4.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/5.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/6.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/7.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <a class="swiper-slide__link">
-                  <img src="img/home/slider/8.jpg" alt="" class="swiper-slide__image" width="371" height="248">
-                </a>
-              </li>
-            </ul>
+          <div class="wrapper">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/1.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/2.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/3.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/4.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/5.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/6.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/7.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a class="swiper-slide__link">
+                    <img src="img/home/slider/8.jpg" alt="" class="swiper-slide__image" width="371" height="248">
+                  </a>
+                </li>
+              </ul>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
 
-          </div> <!-- swiper-container -->
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+            </div> <!-- swiper-container -->
+          </div>
         </div>
-        <div class="priority-project__footer">
-          <a href="" class="button button--transparent">Подробнее</a>
-          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eaque sunt placeat delectus, at
-            ex suscipit mollitia ipsa deleniti labore aliquid eos maiores incidunt provident a distinctio quas eius hic?
-          </p>
-        </div>
+        <div class="wrapper">
+          <div class="priority-project__footer">
+            <a href="" class="button button--transparent">Подробнее</a>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eaque sunt placeat delectus,
+              at
+              ex suscipit mollitia ipsa deleniti labore aliquid eos maiores incidunt provident a distinctio quas eius
+              hic?
+            </p>
+          </div>
 
 
 
 
-      </div>
+        </div> <!-- wrapper -->
     </section>
 
   </main>

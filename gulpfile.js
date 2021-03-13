@@ -1,5 +1,4 @@
 const { task, src, dest, watch, series, parallel } = require('gulp');
-
 /* очистка папки build */
 const rm = require('gulp-rm');
 /* статический сервер*/
@@ -34,13 +33,12 @@ const svgo = require('gulp-svgo');
 const imagemin = require('gulp-imagemin');
 /* сжатие html */
 const htmlmin = require('gulp-htmlmin');
-
 sass.compiler = require('node-sass');
-
 /* задание на: удаление папки build + доп аргументов передаем запрет на считывание файлов - это не нужно.*/
 task('clean', () => {
   return src('./build/**/*', { read: false }).pipe(rm());
 });
+
 task('clean-final', () => {
   return src('./final/**/*', { read: false }).pipe(rm());
 });
@@ -48,7 +46,6 @@ task('clean-final', () => {
 /* задание на: собираем html файлы */
 task('html', () => {
   return src('./src/html/*.html')
-
     .pipe(plumber({
       errorHandler: notify.onError(function (err) {
         return {
@@ -78,31 +75,24 @@ task('html-final', () => {
     }
     ))
     .pipe(fileInclude())
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
     .pipe(dest('./final/'))
 });
 
-/* задание на: собираем html файлы */
+/* задание на: собираем файлы локальных шрифтов */
 task('fonts', () => {
   return src('./src/fonts/*')
     .pipe(dest('./build/fonts/'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
-/* задание на: собираем html файлы */
 task('fonts--final', () => {
   return src('./src/fonts/*')
     .pipe(dest('./final/fonts/'))
 });
-
-
 /* задание на: сборка стилей css  */
 task('styles', () => {
-  return src(['./node_modules/normalize.css/normalize.css', './src/scss/main.scss'])
+  return src(['./node_modules/normalize.css/normalize.css', './src/scss/main.scss', './src/scss/style.scss'])
     .pipe(sourcemaps.init())
-    .pipe(concat('main.css'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(gcmq())
@@ -112,8 +102,7 @@ task('styles', () => {
 });
 
 task('styles-final', () => {
-  return src(['./node_modules/normalize.css/normalize.css', './src/scss/main.scss'])
-    .pipe(concat('main.css'))
+  return src(['./node_modules/normalize.css/normalize.css', './src/scss/main.scss', './src/scss/style.scss'])
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(gcmq())
@@ -121,8 +110,6 @@ task('styles-final', () => {
     .pipe(cleanCSS())
     .pipe(dest('./final/css/'))
 });
-
-
 /* задание на: работа с js  */
 task('scripts', () => {
   return src(['./src/js/*.js'])
@@ -132,7 +119,6 @@ task('scripts', () => {
     .pipe(dest('./build/js/'))
     .pipe(browserSync.reload({ stream: true }));
 });
-
 task('scripts-final', () => {
   return src(['./src/js/*.js'])
     .pipe(concat('main.js', { newLine: ';' }))
@@ -151,8 +137,6 @@ task('libs-final', () => {
   return src('./src/libs/**/*')
     .pipe(dest('./final/libs/'))
 });
-
-
 /* задание на: работа с растровой графикой  */
 task('images', () => {
   return src('./src/img/**/*')
@@ -163,7 +147,7 @@ task('images', () => {
       })
     )
     .pipe(dest('./build/img/'));
-})
+});
 
 task('images-final', () => {
   return src('./src/img/**/*')
@@ -174,8 +158,7 @@ task('images-final', () => {
       })
     )
     .pipe(dest('./final/img/'));
-})
-
+});
 /* задание на: слежка за изменениями в файлах проекта */
 task('watch', () => {
   watch('./src/html/**/*.html', series('html'));
@@ -185,8 +168,6 @@ task('watch', () => {
   watch('./src/img/**/*', series('images'));
   watch('./src/fonts/**/*', series('fonts'));
 })
-
-
 /* задание на: статический сервер для просмотра проекта в браузере  */
 task('server', () => {
   browserSync.init({
@@ -195,7 +176,6 @@ task('server', () => {
     },
   });
 });
-
 task('server-final', () => {
   browserSync.init({
     server: {
@@ -204,7 +184,6 @@ task('server-final', () => {
   });
 });
 
-
 /* основной таск (дефолтный): последовательное выполнение */
 task('default',
   series('clean',
@@ -212,6 +191,7 @@ task('default',
     parallel('server', 'watch')
   ));
 
+/* итоговый таск на прод */
 task('fatality',
   series('clean-final',
     parallel('html-final', 'images-final', 'fonts--final', 'styles-final', 'scripts-final', 'libs-final'),

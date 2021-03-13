@@ -21,10 +21,7 @@
   }
 
   & .home-slider {
-    display: block;
-    margin-bottom: 40px;
-    position: relative;
-    min-height: 255px;
+    margin-bottom: 80px;
   }
 }
 
@@ -59,9 +56,6 @@
   .priority-project__header {
     align-items: self-end;
   }
-  .priority-project .home-slider {
-    min-height: auto;
-  }
 
   .priority-project::before {
     display: none;
@@ -87,7 +81,14 @@
   }
 
   .priority-project__footer .button {
-    margin-bottom: 40px;
+    margin: 40px 0;
+  }
+
+}
+
+@media (max-width: 512px) {
+.priority-project .home-slider {
+    display: none;
   }
 
 }
