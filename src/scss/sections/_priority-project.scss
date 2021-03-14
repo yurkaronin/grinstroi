@@ -23,7 +23,14 @@
   & .home-slider {
     margin-bottom: 80px;
   }
+
+  & .button:hover,
+  & .button:focus {
+    border-color: #467637;
+  }
 }
+
+
 
 .priority-project__header {
   position: relative;
