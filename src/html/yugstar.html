@@ -19,7 +19,6 @@
 </head>
 
 <body class="body">
-  <div class="progress-bar"></div>
   <main class="main">
     <section class="first-screen">
       <div class="wrapper">
@@ -63,10 +62,10 @@
         </div>
       </div>
     </section>
-    <section class="feauteres">
+    <section class="features">
       <div class="wrapper">
         <h2 class="visually-hidden">Преимущества и особенности жилого комплекса</h2>
-        <ul class="feauteres__list list">
+        <ul class="features__list list">
           <li><img src="img/icons/advantages-1.svg" alt="Иконка преимущества">
             <p><span>Квартиры с улучшенной планировкой</span> Мы сделали планировки квартир с учетом всех современных
               требований</p>
@@ -88,7 +87,7 @@
           <li><img src="img/icons/advantages-6.svg" alt="Иконка преимущества">
             <p><span>Экологически чистый район</span> Вы будете жить в нескольких сотнях метров от реки Кубань</p>
           </li>
-        </ul><a href="" class="feauteres__button button button--green">Смотреть все планировки</a>
+        </ul><a href="" class="features__button button button--green">Смотреть все планировки</a>
       </div>
     </section>
     <section class="about">
@@ -256,7 +255,7 @@
               </div>
             </li>
           </ul>
-          <ul class="infrastructure-benefits__list list infrastructure-benefits__list--border">
+          <ul class="infrastructure-benefits__list infrastructure-benefits__list--border">
             <li class="infrastructure-benefits__item"><img class="infrastructure-benefits__icon"
                 src="img/icons/infrastructure-benefits/3.svg" alt="иконка">
               <div class="infrastructure-benefits__wrapper"><span>Маршрутки:</span>
@@ -455,30 +454,12 @@
       </div>
     </section>
   </main>
-  <footer class="footer"></footer><!-- jQuery and fancybox files -->
+  <footer class="footer"></footer>
+  <!-- jQuery and fancybox files -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=1dba075a-a65a-4b22-84a2-ebb26f26fe43" type="text/javascript"></script> -->
   <!-- <script src="js/map.min.js"></script> -->
-  <script>
-    window.addEventListener("scroll", function () {
-    document.querySelector("header").classList.toggle("sticky", window.scrollY > 0)
-    });
-    var progress = document.querySelector(".progress-bar");
-
-    function progressBar(e) {
-    var o = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight -
-    document.documentElement.clientHeight) * 100;
-    progress.style.width = o + "%"
-    }
-    window.addEventListener("scroll", progressBar), wow = new WOW({
-    boxClass: "wow",
-    animateClass: "animated",
-    offset: 0,
-    mobile: !0,
-    live: !0
-    }), wow.init();
-  </script>
 </body>
 
 </html>

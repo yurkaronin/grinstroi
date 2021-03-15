@@ -1,0 +1,159 @@
+.page-home {
+  /* первый экран  */
+  & .first-screen {
+    padding-top: 130px;
+    padding-bottom: 100px;
+    background-image: url("../img/bg/first-screen--home.jpg");
+  }
+
+  & .first-screen::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  & .first-screen .wrapper {
+    position: relative;
+    z-index: 11;
+  }
+
+  & .first-screen .apartment-options {
+    align-items: flex-start;
+    margin-bottom: 45px;
+  }
+
+  & .first-screen .apartment-options {
+    max-width: 100%;
+  }
+
+  & .first-screen .top-promo {
+    position: relative;
+    bottom: 0;
+  }
+
+  & .first-screen .title {
+    margin-bottom: 85px;
+  }
+
+  & .first-screen .title span {
+    color: #d5c695;
+    font-weight: 500;
+    text-transform: none;
+  }
+
+  & .top-promo__title {
+    max-width: 560px;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 110%;
+  }
+
+  & .features {
+    padding-top: 54px;
+    padding-bottom: 85px;
+    min-height: auto;
+    background-color: #467637;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23437135' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  & .features__button {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #467637;
+
+    &:hover {
+      background-color: transparent;
+      opacity: 1;
+      color: #ffffff;
+    }
+  }
+}
+
+.apartment-options {
+  & li {
+    max-width: 30%;
+    width: 100%;
+  }
+
+  & svg {
+    margin-bottom: 25px;
+    height: auto;
+    width: 42px;
+    fill: #d5c695;
+  }
+}
+
+.apartment-options img {
+  margin-bottom: 25px;
+}
+
+.apartment-options p {
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+  color: #fff;
+}
+
+.apartment-options p span {
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .page-home .top-promo__title {
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .page-home .top-promo__buttons-wrapper {
+    margin: 0 auto;
+  }
+
+  .page-home .features__list li {
+    max-width: 450px;
+    text-align: center;
+  }
+
+  .page-home .company-benefit__title span {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .page-home {
+    & .first-screen .title {
+      font-size: 40px;
+    }
+
+    & .first-screen .apartment-options {
+      flex-direction: column;
+    }
+
+    & .first-screen .apartment-options li {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    & .first-screen .apartment-options svg {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
+  }
+}

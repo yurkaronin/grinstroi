@@ -1,0 +1,19 @@
+.we-built {
+  padding: 75px 0 95px;
+}
+
+.we-built .title {
+  font-size: 44px;
+  margin-bottom: 30px;
+  text-align: left;
+  margin-bottom: 68px;
+}
+
+@media (max-width: 1130px) {
+  .we-built .title {
+    margin: 0 auto;
+    margin-bottom: 68px;
+    max-width: 500px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,149 @@
+.house-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.house-cards li {
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.house-cards img {
+  width: 100%;
+  max-height: 197px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+.house-cards .house-cards__wrapper {
+  padding: 35px;
+  padding-bottom: 47px;
+}
+
+.house-cards__label-group {
+  position: absolute;
+  top: -40px;
+  left: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.house-cards li:first-child .house-cards__label-group {
+  justify-content: space-around;
+  left: 0;
+}
+
+.house-cards__label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 110%;
+  text-align: center;
+  color: #000000;
+  width: 84px;
+  height: 84px;
+  padding: 18px 5px 16px;
+  background-color: #52d16e;
+  display: flex;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.house-cards__label b {
+  font-weight: 700;
+}
+
+.house-cards__label--intro {
+  background-color: #935ad0;
+  color: #ffffff;
+}
+
+.house-cards h3 {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.house-cards p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.house-cards__status {
+  display: inline-block;
+  background-color: #284a2e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+  padding: 9.5px 15px 13px;
+  position: absolute;
+  right: 0;
+}
+
+.house-cards__status svg {
+  margin-right: 9.5px;
+}
+
+.house-cards__bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 1130px) {
+  .house-cards {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+
+  .house-cards li {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 750px) {
+  .house-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* @media (max-width: 650px) {
+  .house-cards li {
+    max-width: 450px;
+  }
+} */
+
+@media (max-width: 420px) {
+  .house-cards__bottom {
+    flex-direction: column-reverse;
+  }
+
+  .house-cards__status {
+    position: relative;
+    right: auto;
+    max-width: 260px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .house-cards__link {
+    max-width: 260px;
+    width: 100%;
+  }
+}
