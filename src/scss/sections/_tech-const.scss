@@ -1,0 +1,19 @@
+.tech-const {
+  padding: 96px 0 91px;
+  background-color: #f7f7ec;
+  color: inherit;
+
+  & .title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 120%;
+    color: #000000;
+    max-width: 300px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    position: relative;
+  }
+}
