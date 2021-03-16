@@ -108,6 +108,11 @@
   display: block;
 }
 
+.page-home .features .features__list li {
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
 @media (max-width: 1000px) {
   .page-home .top-promo__title {
     max-width: 100%;

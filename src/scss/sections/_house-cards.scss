@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
   column-gap: 20px;
 }
 
@@ -105,16 +105,51 @@
 
 @media (max-width: 1130px) {
   .house-cards {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 50px;
+    grid-template-columns: auto;
   }
 
   .house-cards li {
-    max-width: 400px;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
   }
 
+  .house-cards img {
+    max-width: 350px;
+  }
+
+  .house-cards .house-cards__wrapper {
+    flex-grow: 2;
+  }
+
+  .house-cards__bottom {
+    justify-content: flex-start;
+  }
+
+  .house-cards__status {
+    position: inherit;
+  }
+
+  .house-cards__link {
+    margin-right: 20px;
+  }
+
+  .house-cards__status,
+  .house-cards__link {
+    padding: 10px 15px;
+  }
+
+  .house-cards__status {
+    max-width: fit-content;
+    background-color: #f7f7ec;
+    color: #000000;
+  }
+
+  .house-cards__status svg {
+    fill: #000000;
+}
 }
 
 @media (max-width: 750px) {
