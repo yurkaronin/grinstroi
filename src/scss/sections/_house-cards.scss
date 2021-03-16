@@ -13,13 +13,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .house-cards img {
   width: 100%;
   max-height: 197px;
   object-fit: cover;
-  display: inline-block;
+  display: block;
 }
 
 .house-cards .house-cards__wrapper {
@@ -91,8 +92,9 @@
   right: 0;
 }
 
-.house-cards__status svg {
+.house-cards__icon {
   margin-right: 9.5px;
+  fill: #ffffff;
 }
 
 .house-cards__bottom {
@@ -106,6 +108,7 @@
 @media (max-width: 1130px) {
   .house-cards {
     grid-template-columns: auto;
+    gap: 50px;
   }
 
   .house-cards li {
@@ -147,22 +150,37 @@
     color: #000000;
   }
 
-  .house-cards__status svg {
+  .house-cards__icon {
+    margin-right: 9.5px;
     fill: #000000;
-}
-}
+  }
 
-@media (max-width: 750px) {
-  .house-cards {
-    grid-template-columns: 1fr;
+  .house-cards li:first-child .house-cards__label-group,
+  .house-cards__label-group {
+    justify-content: flex-start;
+  }
+
+  .house-cards__label {
+    margin-right: 10px;
   }
 }
 
-/* @media (max-width: 650px) {
+@media (max-width: 860px) {
   .house-cards li {
-    max-width: 450px;
+    flex-direction: column;
+    max-width: 350px;
   }
-} */
+
+  .house-cards__status {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+    padding: 9.5px 15px 13px;
+    position: absolute;
+    right: 0;
+}
+}
 
 @media (max-width: 420px) {
   .house-cards__bottom {

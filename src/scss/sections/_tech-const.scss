@@ -17,3 +17,9 @@
     position: relative;
   }
 }
+
+@media (max-width: 800px) {
+  .tech-const .title {
+    font-size: 27px;
+  }
+}

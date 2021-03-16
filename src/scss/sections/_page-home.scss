@@ -110,7 +110,13 @@
 
 .page-home .features .features__list li {
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 65px;
+}
+
+@media (max-width: 1130px) {
+  .page-home .priority-project__header {
+    align-items: center;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -137,6 +143,16 @@
     margin: 0 auto;
     margin-bottom: 10px;
   }
+}
+
+@media (max-width: 860px) {
+.page-home .first-screen .title {
+    font-size: 35px;
+}
+
+.page-home .first-screen .subtitle {
+    font-size: 30px;
+}
 }
 
 @media (max-width: 650px) {

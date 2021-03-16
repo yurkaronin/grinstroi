@@ -52,3 +52,14 @@
     grid-template-columns: auto;
   }
 }
+
+@media (max-width: 500px) {
+.const-list__icon {
+  position: relative;
+  left: 0;
+}
+
+.const-list__item {
+    padding-left: 30px;
+}
+}
