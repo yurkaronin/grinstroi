@@ -146,13 +146,13 @@
 }
 
 @media (max-width: 860px) {
-.page-home .first-screen .title {
+  .page-home .first-screen .title {
     font-size: 35px;
-}
+  }
 
-.page-home .first-screen .subtitle {
+  .page-home .first-screen .subtitle {
     font-size: 30px;
-}
+  }
 }
 
 @media (max-width: 650px) {
@@ -176,5 +176,34 @@
       margin-bottom: 0;
       margin-right: 25px;
     }
+  }
+}
+
+@media (max-width: 380px) {
+  .page-home {
+  & .first-screen .title {
+    font-size: 29px;
+  }
+
+  & .first-screen .subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  & .apartment-options p {
+    max-width: 75%;
+  }
+
+  & .top-promo {
+    padding: 35px 25px;
+  }
+
+  & .top-promo__title {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  & .priority-project .title--two {
+    font-size: 33px;
   }
 }
