@@ -1,0 +1,14 @@
+.link-list {
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 130%;
+color: #467637;
+
+& a {
+  color: inherit;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-decoration: underline;
+}
+}
